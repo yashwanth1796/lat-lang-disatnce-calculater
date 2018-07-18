@@ -1,0 +1,22 @@
+{
+  "name": "lat-lang-disatnce-calculater",
+  "version": "1.0.0",
+  "description": "To calculate distance between two latitudes and longitudes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashwanth1796/lat-lang-disatnce-calculater.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashwanth1796/lat-lang-disatnce-calculater/issues"
+  },
+  "homepage": "https://github.com/yashwanth1796/lat-lang-disatnce-calculater#readme",
+  "dependencies": {
+    "mathjs": "^5.0.3"
+  }
+}
