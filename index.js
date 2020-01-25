@@ -2,7 +2,7 @@
    * Haversine Formula to get distance
    * @param latitude and longitude
    */
-export.calculateDistance = checkIfValid(latlang1, latlang2) {
+ function checkIfValid(latlang1, latlang2) {
 if (latlang1.hasOwnProperty('lat') && latlang1.hasOwnProperty('lng')
 	&& latlang2.hasOwnProperty('lat') && latlang2.hasOwnProperty('lng')) {
 	getDistance(latlang1, latlang2)
@@ -10,6 +10,7 @@ if (latlang1.hasOwnProperty('lat') && latlang1.hasOwnProperty('lng')
     return 'invalid JSON';
    }
 }
+
  function getDistance(from, to) {
     var R = 6378137; // Earth’s mean radius in meter
     var dLat = convertToRadians(to.lat - from.lat);
@@ -20,14 +21,14 @@ if (latlang1.hasOwnProperty('lat') && latlang1.hasOwnProperty('lng')
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))//eslint-disable-line
     var distance = R * c;//eslint-disable-line
     return convertToKMs(distance);
-  },
+  }
   /**
    * To convert to radians from degree's
    * @param number
    */
   function convertToRadians(value) {
     return (Math.PI * value) / 180;
-  },
+  }
   /**
    * To convert to kilometers from meters
    * @param Number
@@ -37,3 +38,4 @@ if (latlang1.hasOwnProperty('lat') && latlang1.hasOwnProperty('lng')
   }
 
 
+export default checkIfValid;
